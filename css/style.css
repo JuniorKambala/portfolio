@@ -87,3 +87,37 @@ main ul {
 main ul li {
     margin-bottom: 10px;
 }
+
+/* =========================
+   SECTION PROJETS (MODERNE)
+   ========================= */
+
+/* Conteneur des projets */
+.projects-container {
+    display: flex;              /* Mise en ligne des cartes */
+    justify-content: center;
+    gap: 30px;                  /* Espace entre les cartes */
+    flex-wrap: wrap;            /* Adaptation sur petits écrans */
+}
+
+/* Carte individuelle */
+.project-card {
+    background-color: #111;     /* Fond sombre légèrement contrasté */
+    border: 1px solid #222;     /* Bordure discrète */
+    border-radius: 10px;        /* Coins arrondis (moderne) */
+    padding: 20px;
+    width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Effet au survol */
+.project-card:hover {
+    transform: translateY(-5px); /* Effet de “lévitation” */
+    box-shadow: 0 0 15px #00ff9966;
+}
+
+/* Titre du projet */
+.project-card h2 {
+    color: #00ff99;
+    margin-bottom: 10px;
+}
