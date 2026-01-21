@@ -1,4 +1,60 @@
 /* =========================
+   STYLE GLOBAL HACKER FUTURISTE
+   ========================= */
+
+h1, h2 {
+    font-family: 'Courier New', Courier, monospace; /* Style console */
+    letter-spacing: 2px;                             /* Lettrage futuriste */
+    text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99; /* Glow léger */
+}
+
+/* Animation légère “slide-in” pour tous les textes importants */
+@keyframes slideInGlobal {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+h1, h2, p {
+    animation: slideInGlobal 1.2s ease-out;
+}
+
+/* NAVIGATION HOVER */
+nav ul li a:hover {
+    text-shadow: 0 0 5px #00ff99;
+    transform: translateY(-2px);
+    transition: 0.3s;
+}
+
+/* PROJETS - CARDS ANIMÉES */
+.project-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    animation: slideInGlobal 1s ease-out; /* Animation entrée */
+}
+
+.project-card:hover {
+    transform: translateY(-8px) rotate(-1deg); /* Léger tilt futuriste */
+    box-shadow: 0 0 25px #00ff9966;
+}
+
+/* FORMULAIRE - HOVER ET FOCUS */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #00ff99;
+    box-shadow: 0 0 10px #00ff9966;
+}
+
+.contact-form button:hover {
+    background-color: #00cc77;
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px #00ff9966;
+    transition: 0.3s;
+}
+
+
+
+/* =========================
    TEXTE HACKER FUTURISTE
    ========================= */
 
@@ -267,4 +323,41 @@ nav ul li a:hover {
     .about-text {
         margin-top: 20px;
     }
+}
+
+/* =========================
+   ANIMATION SUBTILE HACKER
+   ========================= */
+
+/* Animation légère “pulse glow” pour la photo */
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 20px #00ff9966;
+    }
+    50% {
+        box-shadow: 0 0 30px #00ff9988;
+    }
+    100% {
+        box-shadow: 0 0 20px #00ff9966;
+    }
+}
+
+.about-photo img {
+    animation: pulseGlow 3s infinite;  /* Glow qui pulse toutes les 3s */
+}
+
+/* Animation légère “slide-in” pour le texte */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);  /* Texte décalé à droite au départ */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);     /* Texte se place normalement */
+    }
+}
+
+.about-text {
+    animation: slideIn 1.5s ease-out;
 }
