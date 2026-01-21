@@ -1,3 +1,27 @@
+/* =========================
+   TEXTE HACKER FUTURISTE
+   ========================= */
+
+h1, h2 {
+    font-family: 'Courier New', Courier, monospace; /* Style console */
+    letter-spacing: 2px;                             /* Lettrage futuriste */
+}
+
+/* Animation simple type “clignotement terminal” */
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+/* Petit curseur après h1 sur index */
+header h1::after {
+    content: '|';
+    margin-left: 5px;
+    animation: blink 1s infinite;
+    color: #00ff99;
+}
+
+
 body {
     background-color: #0d0d0d;
     color: #e0e0e0;
@@ -108,12 +132,13 @@ main ul li {
     padding: 20px;
     width: 280px;
     transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer; /* donne un effet interactif */
 }
 
 /* Effet au survol */
 .project-card:hover {
-    transform: translateY(-5px); /* Effet de “lévitation” */
-    box-shadow: 0 0 15px #00ff9966;
+   transform: translateY(-8px) rotate(-1deg); /* léger tilt futuriste */
+    box-shadow: 0 0 20px #00ff9966; 
 }
 
 /* Titre du projet */
@@ -176,4 +201,70 @@ main ul li {
 .contact-form button:hover {
     background-color: #00cc77;
     transform: translateY(-2px);
+}
+
+/* Effets subtils sur les titres */
+h1, h2 {
+    text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99;
+}
+
+/* Liens de navigation au survol */
+nav ul li a:hover {
+    text-shadow: 0 0 5px #00ff99;
+}
+
+/* =========================
+   PAGE À PROPOS - STYLE HACKER MODERNE
+   ========================= */
+
+.about-container {
+    display: flex;
+    align-items: center;          /* Aligne verticalement la photo et le texte */
+    justify-content: center;       /* Centre le bloc global horizontalement */
+    gap: 50px;                     /* Espace entre photo et texte */
+    max-width: 1000px;
+    margin: 40px auto;             /* Centrer globalement */
+    padding: 20px;
+    flex-wrap: wrap;               /* Responsive sur petits écrans */
+}
+
+/* PHOTO */
+.about-photo {
+    flex: 1 1 300px;              /* S’adapte, minimum 300px */
+    display: flex;
+    justify-content: center;       /* Centre la photo verticalement */
+}
+
+.about-photo img {
+    width: 100%;                  /* Remplit son conteneur */
+    max-width: 300px;             /* Largeur max */
+    height: auto;
+    border-radius: 15px;          /* Coins arrondis */
+    border: 2px solid #00ff99;    /* Bordure hacker */
+    box-shadow: 0 0 20px #00ff9966; /* Glow subtil */
+}
+
+/* TEXTE */
+.about-text {
+    flex: 2 1 500px;              /* Plus large que la photo */
+    color: #e0e0e0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-text h2 {
+    color: #00ff99;
+    margin-bottom: 15px;
+}
+
+/* Responsive - mobile */
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column;   /* Photo au-dessus du texte */
+        text-align: center;
+    }
+
+    .about-text {
+        margin-top: 20px;
+    }
 }
