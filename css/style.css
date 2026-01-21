@@ -121,3 +121,59 @@ main ul li {
     color: #00ff99;
     margin-bottom: 10px;
 }
+
+/* =========================
+   FORMULAIRE DE CONTACT
+   ========================= */
+
+.contact-form {
+    background-color: #111;        /* Fond sombre du formulaire */
+    border: 1px solid #222;        /* Bordure discrète */
+    border-radius: 10px;
+    padding: 25px;
+    max-width: 500px;
+    margin: 0 auto;                /* Centré */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    color: #00ff99;                /* Texte vert hacker */
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: #0d0d0d;    /* Fond sombre des champs */
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 10px;
+    color: #e0e0e0;
+    font-size: 16px;
+}
+
+/* Effet focus sur les champs */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #00ff99;
+    box-shadow: 0 0 8px #00ff9966;
+}
+
+/* Bouton envoyer */
+.contact-form button {
+    background-color: #00ff99;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover sur le bouton */
+.contact-form button:hover {
+    background-color: #00cc77;
+    transform: translateY(-2px);
+}
