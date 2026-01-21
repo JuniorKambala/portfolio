@@ -51,3 +51,39 @@ nav ul li a {
 nav ul li a:hover {
     color: #00ff99;              /* Vert hacker au passage de la souris */
 }
+
+/* =========================
+   CONTENU PRINCIPAL
+   ========================= */
+
+/* Zone centrale du contenu */
+main {
+    max-width: 900px;           /* Largeur confortable pour la lecture */
+    margin: 40px auto;          /* Centre le contenu horizontalement */
+    padding: 20px;
+}
+
+/* Titres principaux des pages */
+main h1 {
+    color: #00ff99;             /* Vert hacker */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Paragraphes */
+main p {
+    line-height: 1.6;           /* Espacement vertical (lisibilité) */
+    margin-bottom: 15px;
+}
+
+/* Listes (compétences) */
+main ul {
+    list-style: square;         /* Style de puce propre */
+    text-align: left;           /* Alignement à gauche */
+    margin-left: 40px;
+}
+
+/* Élément de liste */
+main ul li {
+    margin-bottom: 10px;
+}
