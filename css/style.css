@@ -19,3 +19,35 @@ h1 {
 p {
     font-size: 18px;
 }
+
+/* =========================
+   BARRE DE NAVIGATION
+   ========================= */
+
+nav {
+    background-color: #111;      /* Fond légèrement différent du body */
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;            /* Supprime les puces */
+    display: flex;               /* Aligne les liens horizontalement */
+    justify-content: center;     /* Centre les liens */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;              /* Espacement entre les liens */
+}
+
+nav ul li a {
+    color: #e0e0e0;              /* Couleur du texte */
+    text-decoration: none;       /* Supprime le soulignement */
+    font-weight: bold;
+}
+
+/* Effet au survol (hover) */
+nav ul li a:hover {
+    color: #00ff99;              /* Vert hacker au passage de la souris */
+}
