@@ -41,3 +41,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+/* =====================================
+   NAVIGATION ACTIVE + EFFET STICKY
+   ===================================== */
+
+// Mise en évidence du lien actif
+const currentPage = window.location.pathname.split("/").pop();
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach(link => {
+  const linkPage = link.getAttribute("href");
+
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  }
+});
+
+// Effet sticky au scroll
+const nav = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 20) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+});
