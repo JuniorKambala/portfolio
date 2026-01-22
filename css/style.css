@@ -572,3 +572,21 @@ body.page-exit {
   opacity: 0;
   background-color: #050505; /* noir profond, ambiance hacking */
 }
+
+/* ================================
+   ANIMATION D’ENTRÉE DE PAGE
+   ================================ */
+
+/* État initial au chargement */
+body {
+  animation: pageEnter 0.4s ease-in-out;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
