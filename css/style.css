@@ -403,3 +403,14 @@ main ul li:nth-child(5) { animation-delay: 1s; }
     border-radius: 10px;
 }
 
+.project-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    animation: slideInGlobal 1s ease-out;
+}
+
+.project-card:hover {
+    transform: translateY(-8px) rotate(-1deg);
+    box-shadow: 0 0 25px #00ff9966;
+}
+
