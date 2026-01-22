@@ -556,3 +556,19 @@ nav a.active::after {
   height: 2px;
   background-color: #00ffd5;
 }
+
+/* ================================
+   TRANSITION ENTRE PAGES (STYLE HACKING DISCRET)
+   ================================ */
+
+/* État normal de la page */
+body {
+  opacity: 1;
+  transition: opacity 0.35s ease-in-out, background-color 0.35s ease-in-out;
+}
+
+/* État de sortie avant changement de page */
+body.page-exit {
+  opacity: 0;
+  background-color: #050505; /* noir profond, ambiance hacking */
+}
