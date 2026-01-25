@@ -322,16 +322,16 @@ nav ul li a:hover {
 }
 
 /* Responsive - mobile */
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
     .about-container {
         flex-direction: column;   /* Photo au-dessus du texte */
         text-align: center;
-    }
+    /*}
 
     .about-text {
         margin-top: 20px;
     }
-}
+}*/
 
 /* =========================
    ANIMATION SUBTILE HACKER
@@ -728,110 +728,56 @@ footer {
     color: #00ff00;
 }
 
-/* ==========================
-   Media Queries
-   ========================== */
 
-/* Tablettes */
+/* ================================
+   RESPONSIVE MOBILE — BASE PRO
+   ================================ */
 @media (max-width: 768px) {
-    body {
-        font-size: 15px;
-    }
 
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .card-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .card {
-        flex: 1 1 90%;
-        padding: 18px;
-    }
-
-    section {
-        padding: 50px 15px;
-        min-height: 70vh;
-    }
-}
-
-/* Smartphones */
-@media (max-width: 480px) {
-    body {
-        font-size: 16px;
-        padding: 5px; /* réduire padding global */
-    }
-
-    .navbar {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 10px;
-    }
-
-    .navbar a {
-        padding: 12px 0;
-        text-align: center;
-    }
-
-    section {
-        padding: 30px 10px;
-        min-height: 80vh; /* immersive */
-    }
-
-    .hero-title {
-        font-size: 2rem;
-        margin-bottom: 20px;
-    }
-
-    .card-container {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
-    }
-
-    .card {
-        flex: 1 1 100%; /* plein écran largeur */
-        margin: 0;
-        padding: 15px;
-    }
-
-    /* Canvas Matrix si présent */
-    #matrixCanvas {
-        width: 100%;
-        height: 60vh;
-    }
-}
-
-/* ===== Mobile horizontal layout ===== */
-@media (max-width: 768px) {
+  /* Structure globale */
+  body {
+    overflow-x: hidden;
+  }
 
   main {
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
+    width: 100%;
     padding: 1rem;
   }
 
   section {
-    min-width: 85%;
-    padding: 1.5rem;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(6px);
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1.5rem 1rem;
+    box-sizing: border-box;
+  }
+
+  /* Tous les conteneurs repassent en colonne */
+  .container,
+  .content,
+  .section-content,
+  .projects-container,
+  .skills-container {
+    display: block;
+    width: 100%;
+  }
+
+  /* Cartes (projets, compétences, etc.) */
+  .project-card,
+  .skill-card,
+  .card {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
 
 }
-
-
 
 
 
