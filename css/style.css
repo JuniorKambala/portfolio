@@ -325,7 +325,7 @@ nav ul li a:hover {
 /*@media screen and (max-width: 768px) {
     .about-container {
         flex-direction: column;   /* Photo au-dessus du texte */
-        text-align: center;
+        /*text-align: center;*/
     /*}
 
     .about-text {
@@ -778,6 +778,7 @@ footer {
   }
 
 }
+
 
 
 
