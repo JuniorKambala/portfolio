@@ -735,21 +735,21 @@ footer {
 @media (max-width: 768px) {
 
   /* Structure globale */
-  body {
+ /* body {
     overflow-x: hidden;
-  }
+  }*/
 
-  main {
+  /*main {
     width: 100%;
     padding: 1rem;
-  }
+  }*/
 
-  section {
+  /*section {
     width: 100%;
     margin-bottom: 2rem;
     padding: 1.5rem 1rem;
     box-sizing: border-box;
-  }
+  }*/
 
   /* Tous les conteneurs repassent en colonne */
   .container,
