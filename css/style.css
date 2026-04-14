@@ -760,14 +760,6 @@ footer {
     margin-bottom: 2rem;
     padding: 1.5rem 1rem;
     box-sizing: border-box;*/
-    background: rgba(0, 0, 0, 0.6); /* fond sombre */
-    border-radius: 12px;
-    margin: 1.5rem 0;
-    padding: 1.5rem;
-    
-    /* effet hacking discret */
-    border: 1px solid rgba(0, 255, 170, 0.2);
-    box-shadow: 0 0 10px rgba(0, 255, 170, 0.1);
   }
 
   /* Tous les conteneurs repassent en colonne */
@@ -802,13 +794,7 @@ footer {
   * {
     box-sizing: border-box;
   }
-
-  section h2 {
-    margin-bottom: 1rem;
-    border-bottom: 1px solid rgba(0, 255, 170, 0.2);
-    padding-bottom: 0.5rem;
-  }
-
+  
 }
 
 
