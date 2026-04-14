@@ -240,6 +240,7 @@ main ul li {
     padding: 10px;
     color: #e0e0e0;
     font-size: 16px;
+    resize: vertical;
 }
 
 /* Effet focus sur les champs */
@@ -796,6 +797,32 @@ footer {
 
 }
 
+
+@media (max-width: 768px) {
+
+  section {
+    background: rgba(0, 0, 0, 0.6); /* fond sombre */
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    
+    /* effet hacking discret */
+    border: 1px solid rgba(0, 255, 170, 0.2);
+    box-shadow: 0 0 10px rgba(0, 255, 170, 0.1);
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  section h2 {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 255, 170, 0.2);
+    padding-bottom: 0.5rem;
+  }
+
+}
 
 
 
