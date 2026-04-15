@@ -68,3 +68,20 @@ window.addEventListener("scroll", () => {
     nav.classList.remove("scrolled");
   }
 });
+
+
+// Gestion du formulaire Netlify - Message de succès
+document.addEventListener('DOMContentLoaded', function() {
+    // Vérifie si le paramètre success=true est dans l'URL
+    if (window.location.search.includes('success=true')) {
+        const messageSucces = document.getElementById('message-succes');
+        const formulaire = document.getElementById('contact-form');
+        
+        if (messageSucces) {
+            messageSucces.style.display = 'block';
+        }
+        if (formulaire) {
+            formulaire.style.display = 'none';
+        }
+    }
+});
