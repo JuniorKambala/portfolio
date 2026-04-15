@@ -24,8 +24,10 @@
 
         <!-- Formulaire de contact -->
 
-        <form data-netlify="true"  class="contact-form">
+        
+        <form data-netlify="true" id="contact-form" class="contact-form">
             <input type="hidden" name="form-name" value="contact" >
+            <input type="hidden" name="redirect" value="?success=true">
 
             <!-- Champ nom -->
             <label for="name">Nom complet</label>
@@ -43,6 +45,21 @@
             <button type="submit">Envoyer</button>
 
         </form>
+
+        <div id="message-succes" style="display: none; text-align: center; padding: 40px; background: #d4edda; border-radius: 10px; margin-top: 30px;">
+            <h2>✅ Message envoyé !</h2>
+            <p>Merci de m'avoir contacté. Je vous répondrai dans les plus brefs délais.</p>
+            <a href="index.html">← Retour à l'accueil</a>
+        </div>
+
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('success') === 'true') {
+                document.getElementById('message-succes').style.display = 'block';
+                document.getElementById('contact-form').style.display = 'none';
+            }
+        </script>
+
     </main>
 
     <script src="js/main.js"></script>
