@@ -48,7 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Mise en évidence automatique de la page active
-const currentPage = window.location.pathname.split("/").pop() || "index.html";
+const currentPage = window.location.pathname.split("/").pop();
+
+const pageActuelle = currentPage === "" ? "index.html" : currentPage;
 const navLinks = document.querySelectorAll(".nav-menu a");
 
 navLinks.forEach(link => {
@@ -57,8 +59,8 @@ navLinks.forEach(link => {
 
     link.classList.remove("active");
 
-    if (linkPage === currentPage) {
-        link.classList.add("active");
+    if (linkPage === pageActuelle) {
+      link.classList.add("active");
     }
 
 });
