@@ -864,7 +864,7 @@ footer {
 
 .contact-card:hover {
     transform: translateY(-8px);
-    border-color: #00bfff;
+    border-color: #00ff0088;
 }
 
 .contact-icon {
@@ -947,11 +947,11 @@ footer {
 
 .learning-card:hover {
     transform: translateY(-6px);
-    border-color: #00bfff;
+    border-color: #00ff0088;
 }
 
 .learning-card h2 {
-    color: #00bfff;
+    color: #00ff0088;
     margin-bottom: 12px;
 }
 
