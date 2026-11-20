@@ -46,17 +46,23 @@ document.addEventListener("DOMContentLoaded", () => {
    NAVIGATION ACTIVE + EFFET STICKY
    ===================================== */
 
-// Mise en évidence du lien actif
-const currentPage = window.location.pathname.split("/").pop();
-const navLinks = document.querySelectorAll("nav a");
+
+// Mise en évidence automatique de la page active
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
+const navLinks = document.querySelectorAll(".nav-menu a");
 
 navLinks.forEach(link => {
-  const linkPage = link.getAttribute("href");
 
-  if (linkPage === currentPage) {
-    link.classList.add("active");
-  }
+    const linkPage = link.getAttribute("href").split("/").pop();
+
+    link.classList.remove("active");
+
+    if (linkPage === currentPage) {
+        link.classList.add("active");
+    }
+
 });
+
 
 // Effet sticky au scroll
 const nav = document.querySelector("nav");
