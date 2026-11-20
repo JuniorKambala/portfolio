@@ -85,3 +85,49 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+
+
+/* =====================================
+   MENU HAMBURGER SUR MOBILE
+   ===================================== */
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+    const boutonMenu = document.getElementById("nav-toggle");
+    const menuNavigation = document.getElementById("nav-menu");
+
+    if (!boutonMenu || !menuNavigation) {
+        return;
+    }
+
+    // Ouvrir ou fermer le menu
+    boutonMenu.addEventListener("click", () => {
+
+        const menuOuvert = menuNavigation.classList.toggle("active");
+
+        boutonMenu.setAttribute("aria-expanded", menuOuvert);
+        boutonMenu.setAttribute(
+            "aria-label",
+            menuOuvert ? "Fermer le menu" : "Ouvrir le menu"
+        );
+
+    });
+
+    // Fermer le menu après un clic sur un lien
+    const liensMenu = menuNavigation.querySelectorAll("a");
+
+    liensMenu.forEach(lien => {
+
+        lien.addEventListener("click", () => {
+
+            menuNavigation.classList.remove("active");
+
+            boutonMenu.setAttribute("aria-expanded", "false");
+            boutonMenu.setAttribute("aria-label", "Ouvrir le menu");
+
+        });
+
+    });
+
+});
