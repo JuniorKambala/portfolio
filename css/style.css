@@ -828,6 +828,88 @@ footer {
 
 
 
+/* ===============================
+   NOUVELLE SECTION CONTACT
+   =============================== */
+
+.contact-main {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.contact-intro {
+    max-width: 650px;
+    margin: 15px auto 40px;
+    line-height: 1.7;
+    color: #bdbdbd;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    flex: 1;
+    padding: 35px 25px;
+    border: 1px solid #333;
+    border-radius: 15px;
+    background: #171717;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    border-color: #00bfff;
+}
+
+.contact-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.contact-card h2 {
+    margin-bottom: 12px;
+}
+
+.contact-card p {
+    color: #bdbdbd;
+    line-height: 1.6;
+    min-height: 75px;
+}
+
+.contact-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: #00bfff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.contact-button:hover {
+    background: #008fc2;
+}
+
+/* Adaptation aux téléphones */
+@media (max-width: 650px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
 
 
 

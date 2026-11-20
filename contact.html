@@ -1,9 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- Pour que le site s’adapte à la largeur de l’écran -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Kambala Mpoyi Junior</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -18,30 +18,64 @@
         <a href="projets.html">PROJETS</a>
         <a href="contact.html" class="active">CONTACT</a>
     </nav>
+
     <!-- Section contact -->
-    <main>
-        <h1>Me contacter</h1>
+    <main class="contact-main">
 
-        <!-- Formulaire de contact -->
+        <h1>Entrons en contact</h1>
 
-        
-        <form action="https://formspree.io/f/xwvavwvl" method="POST" id="contact-form" class="contact-form">
-            <input type="hidden" name="form-name" value="contact">
-    
-            <label for="name">Nom complet</label>
-            <input type="text" id="name" name="name" placeholder="Veuillez entrer votre nom complet" required>
+        <p class="contact-intro">
+            Vous avez un projet, une proposition de collaboration
+            ou une opportunité professionnelle ?
+            N'hésitez pas à me contacter directement.
+        </p>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Veuillez entrer votre adresse mail" required>
+        <div class="contact-container">
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Votre message ici..." required></textarea>
+            <!-- Contact WhatsApp -->
+            <div class="contact-card whatsapp-card">
 
-            <button type="submit">Envoyer</button>
-        </form>
+                <div class="contact-icon">✆</div>
+
+                <h2>WhatsApp</h2>
+
+                <p>
+                    Discutons directement de vos idées,
+                    projets ou propositions.
+                </p>
+
+                <a href="https://wa.me/243823275056?text=Bonjour%20Junior,%20je%20vous%20contacte%20depuis%20votre%20portfolio."
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="contact-button">
+                    Me contacter sur WhatsApp
+                </a>
+
+            </div>
+
+            <!-- Contact E-mail -->
+            <div class="contact-card email-card">
+
+                <div class="contact-icon">✉</div>
+
+                <h2>E-mail</h2>
+
+                <p>
+                    Pour toute demande professionnelle,
+                    vous pouvez m'écrire directement.
+                </p>
+
+                <a href="mailto:kambalajunior4@gmail.com"
+                   class="contact-button">
+                    M'envoyer un e-mail
+                </a>
+
+            </div>
+
+        </div>
 
     </main>
 
-    <script src="js/main.js"></script>
 </body>
 </html>
+
