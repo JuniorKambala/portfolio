@@ -911,5 +911,65 @@ footer {
 }
 
 
+/* ===============================
+   DOMAINES D'APPRENTISSAGE
+   =============================== */
+
+.learning-main {
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.learning-intro {
+    max-width: 700px;
+    margin: 15px auto 40px;
+    color: #bdbdbd;
+    line-height: 1.7;
+}
+
+.learning-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.learning-card {
+    background: #171717;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 28px;
+    text-align: left;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.learning-card:hover {
+    transform: translateY(-6px);
+    border-color: #00bfff;
+}
+
+.learning-card h2 {
+    color: #00bfff;
+    margin-bottom: 12px;
+}
+
+.learning-card p {
+    color: #bdbdbd;
+    line-height: 1.7;
+}
+
+/* Adaptation aux téléphones */
+@media (max-width: 650px) {
+    .learning-container {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-card {
+        padding: 22px;
+    }
+}
+
 
 
